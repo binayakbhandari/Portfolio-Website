@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function Form({ type, id }) {
     // console.log(person, "Haha")
+    console.log(id)
     const defaultImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhaM9z2Crf5aEDYpFp1Bj18o3cQ690URe_ow&s"
     const navigate = useNavigate()
     const [data, setData] = useState({
