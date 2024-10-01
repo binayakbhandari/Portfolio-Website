@@ -45,7 +45,7 @@ function Form({ type, id }) {
         } else {
             const response = await axios.put("https://66dc946947d749b72acbfa21.mockapi.io/persons/" + id, data)
             if (response.status === 200) {
-                navigate('/person/' + id)
+                navigate('/persons/' + id)
             } else {
                 alert("Failed to edit the profile.")
             }
@@ -53,7 +53,7 @@ function Form({ type, id }) {
     }
 
     const cancelEdit = ()=>{
-        navigate(`/person/${id}`)
+        navigate(`/persons/${id}`)
     }
 
     return (
