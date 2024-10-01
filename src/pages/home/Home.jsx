@@ -7,10 +7,10 @@ import { useEffect, useState } from "react"
 function Home() {
     const [persons,setPersons] = useState([])
     const fetchPersons = async ()=>{
-        const response = await axios.get("https://66dc946947d749b72acbfa21.mockapi.io/persons")
+        const response = await axios.get("http://localhost:3000/person")
         // console.log(response.data)
         if(response.status === 200){
-            setPersons(response.data)
+            setPersons(response.data.data)
         }
     }
     useEffect(()=>{

@@ -1,24 +1,24 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import Home from "../home/Home"
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 
 function SingleProduct() {
     const { id } = useParams()
+    console.log("This is id",id)
     const [person, setPerson] = useState({})
     const navigate = useNavigate()
     const fetchPerson = async () => {
-        const response = await axios.get("https://66dc946947d749b72acbfa21.mockapi.io/persons/" + id)
+        const response = await axios.get("http://localhost:3000/person/" + id)
         console.log(response)
         if (response.status === 200) {
-            setPerson(response.data)
+            setPerson(response.data.data)
         }
     }
 
     const deletePerson = async () => {
-        const response = await axios.delete("https://66dc946947d749b72acbfa21.mockapi.io/persons/" + id)
+        const response = await axios.delete("http://localhost:3000/person/" + id)
         console.log(response)
         if (response.status === 200) {
             navigate('/')
@@ -49,7 +49,7 @@ function SingleProduct() {
                                     </Link>
                                 </div> */}
                                 <div className="w-1/2 px-2 mb-2">
-                                    <Link to={`/edit/${person.id}`}>
+                                    <Link to={`/edit/${id}`} >
                                         <button className="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700">Edit Details</button>
                                     </Link>
                                 </div>

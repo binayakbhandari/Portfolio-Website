@@ -64,7 +64,7 @@ function Navbar() {
                                     <img
                                         className="h-8 w-auto"
                                         src="https://cdn0.iconfinder.com/data/icons/logos-brands-in-colors/128/react_color-512.png"
-                                        alt="Your Logo"
+                                        alt="Logo"
                                     />
                                 </Link>
                             </div>

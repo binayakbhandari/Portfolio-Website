@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Form({ type, id }) {
-    // console.log(person, "Haha")
+    console.log(id, "Haha")
     const defaultImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhaM9z2Crf5aEDYpFp1Bj18o3cQ690URe_ow&s"
     const navigate = useNavigate()
     const [data, setData] = useState({
@@ -11,9 +11,9 @@ function Form({ type, id }) {
         personGender: "male"
     })
     const fetchPerson = async () => {
-        const response = await axios.get("https://66dc946947d749b72acbfa21.mockapi.io/persons/" + id)
+        const response = await axios.get("http://localhost:3000/person/" + id)
         if (response.status === 200) {
-            setData(response.data)
+            setData(response.data.data)
         }
     }
 
@@ -28,22 +28,30 @@ function Form({ type, id }) {
         const { value, name } = e.target
         setData({
             ...data,
-            [name]: value
+            [name]: name === "personImage" ? e.target.files[0] : value
         })
     }
     console.log(data)
 
-    const createProduct = async (e) => {
+    const createPerson = async (e) => {
         e.preventDefault()
         if (type === "create") {
-            const response = await axios.post("https://66dc946947d749b72acbfa21.mockapi.io/persons", data)
-            if (response.status === 201) {
+            const response = await axios.post("http://localhost:3000/person", data,{
+                headers : {
+                    "Content-Type" : "multipart/form-data"
+                }
+            })
+            if (response.status === 200) {
                 navigate('/')
             } else {
                 alert("Fail to create new profile.")
             }
         } else {
-            const response = await axios.put("https://66dc946947d749b72acbfa21.mockapi.io/persons/" + id, data)
+            const response = await axios.patch("http://localhost:3000/person/" + id, data,{
+                headers : {
+                    "Content-Type" : "multipart/form-data"
+                }
+            })
             if (response.status === 200) {
                 navigate('/person/' + id)
             } else {
@@ -60,7 +68,7 @@ function Form({ type, id }) {
         <>
             <div className="flex justify-center items-center min-h-screen px-4 py-8">
                 <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
-                    <form onSubmit={createProduct}>
+                    <form onSubmit={createPerson}>
                         <div className="space-y-8">
                             <div className="border-b border-gray-900/10 pb-8">
                                 {/* <h2 className="text-lg font-semibold leading-7 text-gray-900">Edit Information</h2> */}
@@ -148,7 +156,7 @@ function Form({ type, id }) {
                                         </div>
                                     </div>
                                     <div className="md:col-span-1">
-                                        <label htmlFor="personProfession" className="block text-sm font-medium leading-6 text-gray-900">Marital Status</label>
+                                        <label htmlFor="personStatus" className="block text-sm font-medium leading-6 text-gray-900">Marital Status</label>
                                         <div className="mt-2">
                                             {/* <input
                                                 type="text"
@@ -174,22 +182,21 @@ function Form({ type, id }) {
                                         </div>
                                     </div>
                                     <div className="md:col-span-1">
-                                        <label htmlFor="personProfession" className="block text-sm font-medium leading-6 text-gray-900">Image</label>
+                                        <label htmlFor="personImage" className="block text-sm font-medium leading-6 text-gray-900">Image</label>
                                         <div className="mt-2">
                                             <input
-                                                type="text"
+                                                type="file"
                                                 name="personImage"
                                                 id="personImage"
                                                 autoComplete="personImage"
                                                 className="block w-full border-0 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 shadow-sm ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
-                                                placeholder="https://example.com/image.jpg/"
                                                 onChange={handleChange}
-                                                value={data.personImage}
+                                                // value={data.personImage}
                                             />
                                         </div>
                                     </div>
                                     <div className="md:col-span-1">
-                                        <label htmlFor="personProfession" className="block text-sm font-medium leading-6 text-gray-900">Social Media Link</label>
+                                        <label htmlFor="personLink" className="block text-sm font-medium leading-6 text-gray-900">Social Media Link</label>
                                         <div className="mt-2">
                                             <input
                                                 type="text"
