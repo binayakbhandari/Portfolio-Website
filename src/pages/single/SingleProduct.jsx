@@ -10,7 +10,7 @@ function SingleProduct() {
     const [person, setPerson] = useState({})
     const navigate = useNavigate()
     const fetchPerson = async () => {
-        const response = await axios.get("http://localhost:3000/person/" + id)
+        const response = await axios.get("https://mern3-0-node-profilecard.onrender.com/person/" + id)
         console.log(response)
         if (response.status === 200) {
             setPerson(response.data.data)
@@ -18,7 +18,7 @@ function SingleProduct() {
     }
 
     const deletePerson = async () => {
-        const response = await axios.delete("http://localhost:3000/person/" + id)
+        const response = await axios.delete("https://mern3-0-node-profilecard.onrender.com/person/" + id)
         console.log(response)
         if (response.status === 200) {
             navigate('/')

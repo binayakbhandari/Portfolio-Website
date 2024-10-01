@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 function Home() {
     const [persons,setPersons] = useState([])
     const fetchPersons = async ()=>{
-        const response = await axios.get("http://localhost:3000/person")
+        const response = await axios.get("https://mern3-0-node-profilecard.onrender.com/person")
         // console.log(response.data)
         if(response.status === 200){
             setPersons(response.data.data)
