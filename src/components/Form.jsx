@@ -12,11 +12,7 @@ function Form({ type, id }) {
     })
     
 
-    useEffect(() => {
-        if (type === "edit") {
-            fetchPerson()
-        }
-    }, [])
+
 
     const handleChange = (e) => {
         // console.log(e.target.value)
