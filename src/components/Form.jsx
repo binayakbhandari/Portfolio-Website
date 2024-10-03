@@ -14,14 +14,7 @@ function Form({ type, id }) {
 
 
 
-    const handleChange = (e) => {
-        // console.log(e.target.value)
-        const { value, name } = e.target
-        setData({
-            ...data,
-            [name]: name === "personImage" ? e.target.files[0] : value
-        })
-    }
+
     console.log(data)
 
     const createPerson = async (e) => {
