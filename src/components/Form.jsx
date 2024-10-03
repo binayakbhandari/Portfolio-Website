@@ -41,7 +41,7 @@ function Form({ type, id }) {
                     "Content-Type" : "multipart/form-data"
                 }
             })
-            if (response.status === 200) {
+            if (response.status === 201) {
                 navigate('/')
             } else {
                 alert("Fail to create new profile.")
@@ -111,7 +111,7 @@ function Form({ type, id }) {
                                         </div>
                                     </div>
                                     <div className="md:col-span-1">
-                                        <label htmlFor="personProfession" className="block text-sm font-medium leading-6 text-gray-900">Age</label>
+                                        <label htmlFor="personAge" className="block text-sm font-medium leading-6 text-gray-900">Age</label>
                                         <div className="mt-2">
                                             <input
                                                 type="text"
@@ -126,7 +126,7 @@ function Form({ type, id }) {
                                         </div>
                                     </div>
                                     <div className="md:col-span-1">
-                                        <label htmlFor="personProfession" className="block text-sm font-medium leading-6 text-gray-900">Hobbies</label>
+                                        <label htmlFor="personHobbies" className="block text-sm font-medium leading-6 text-gray-900">Hobbies</label>
                                         <div className="mt-2">
                                             <input
                                                 type="text"
@@ -212,7 +212,7 @@ function Form({ type, id }) {
                                     </div>
 
                                     <div className="md:col-span-2">
-                                        <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">Moto</label>
+                                        <label htmlFor="personMoto" className="block text-sm font-medium leading-6 text-gray-900">Moto</label>
                                         <div className="mt-2">
                                             <textarea
                                                 id="personMoto"
