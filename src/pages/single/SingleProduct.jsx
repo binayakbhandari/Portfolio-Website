@@ -18,9 +18,7 @@ function SingleProduct() {
     }
 
     
-    useEffect(() => {
-        fetchPerson()
-    }, [])
+
 
 
     return (
