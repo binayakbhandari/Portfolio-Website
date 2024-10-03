@@ -17,16 +17,7 @@ function SingleProduct() {
         }
     }
 
-    const deletePerson = async () => {
-        const response = await axios.delete("https://mern3-0-node-profilecard.onrender.com/person/" + id)
-        console.log(response)
-        if (response.status === 200) {
-            navigate('/')
-        } else {
-            alert("Fail to delete the file !")
-        }
-    }
-
+    
     useEffect(() => {
         fetchPerson()
     }, [])
