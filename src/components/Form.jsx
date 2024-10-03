@@ -47,7 +47,7 @@ function Form({ type, id }) {
                 alert("Fail to create new profile.")
             }
         } else {
-            const response = await axios.patch("https://mern3-0-node-profilecard.onrender.com/edit/" + id, data,{
+            const response = await axios.patch("https://mern3-0-node-profilecard.onrender.com/person/" + id, data,{
                 headers : {
                     "Content-Type" : "multipart/form-data"
                 }
