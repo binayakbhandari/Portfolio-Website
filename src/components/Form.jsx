@@ -41,7 +41,7 @@ function Form({ type, id }) {
                     "Content-Type" : "multipart/form-data"
                 }
             })
-            if (response.status === 201) {
+            if (response.status === 200) {
                 navigate('/')
             } else {
                 alert("Fail to create new profile.")
