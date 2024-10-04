@@ -193,6 +193,7 @@ function Form({ type, id }) {
                                                 onChange={handleChange}
                                                 // value={data.personImage}
                                             />
+                                            Please upload a photo with a file size less than 1 MB.
                                         </div>
                                     </div>
                                     <div className="md:col-span-1">
