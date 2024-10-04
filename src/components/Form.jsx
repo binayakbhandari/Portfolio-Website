@@ -61,7 +61,11 @@ function Form({ type, id }) {
     }
 
     const cancelEdit = () => {
-        navigate(`/person/${id}`)
+        if((type === "edit")){
+            navigate(`/person/${id}`)
+        }else{
+            navigate('/')
+        }
     }
 
     return (
