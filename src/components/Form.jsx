@@ -36,9 +36,9 @@ function Form({ type, id }) {
     const createPerson = async (e) => {
         e.preventDefault()
         if (type === "create") {
-            const response = await axios.post("https://mern3-0-node-profilecard.onrender.com/person", data,{
-                headers : {
-                    "Content-Type" : "multipart/form-data"
+            const response = await axios.post("https://mern3-0-node-profilecard.onrender.com/person", data, {
+                headers: {
+                    "Content-Type": "multipart/form-data"
                 }
             })
             if (response.status === 200) {
@@ -47,9 +47,9 @@ function Form({ type, id }) {
                 alert("Fail to create new profile.")
             }
         } else {
-            const response = await axios.patch("https://mern3-0-node-profilecard.onrender.com/person/" + id, data,{
-                headers : {
-                    "Content-Type" : "multipart/form-data"
+            const response = await axios.patch("https://mern3-0-node-profilecard.onrender.com/person/" + id, data, {
+                headers: {
+                    "Content-Type": "multipart/form-data"
                 }
             })
             if (response.status === 200) {
@@ -60,7 +60,7 @@ function Form({ type, id }) {
         }
     }
 
-    const cancelEdit = ()=>{
+    const cancelEdit = () => {
         navigate(`/person/${id}`)
     }
 
@@ -191,9 +191,11 @@ function Form({ type, id }) {
                                                 autoComplete="personImage"
                                                 className="block w-full border-0 bg-transparent py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 shadow-sm ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
                                                 onChange={handleChange}
-                                                // value={data.personImage}
+                                            // value={data.personImage}
                                             />
-                                            Please upload a photo with a file size less than 1 MB.
+                                            <p className="mt-1 text-sm text-red-600">
+                                                Please upload a photo with a file size less than 1 MB.
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="md:col-span-1">
