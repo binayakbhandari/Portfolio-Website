@@ -20,24 +20,7 @@ function Navbar() {
                             </div>
 
                             {/* Always visible "+ Create Card" button */}
-                                <div className="ml-4 my-4 sm:ml-6">
-                                    <Link
-                                        to="/create"
-                                        className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                        aria-current="page"
-                                    >
-                                        + Create Profile
-                                    </Link>
-                                </div>
-                                <div className="ml-4 my-4 sm:ml-6">
-                                    <Link
-                                        to="/contact"
-                                        className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                        aria-current="page"
-                                    >
-                                        Contact
-                                    </Link>
-                                </div>
+                                
                         </div>
 
                         {/* User Profile Button */}
