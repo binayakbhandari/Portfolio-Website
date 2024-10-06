@@ -13,7 +13,11 @@ function ContactForm() {
                             <h2 className="text-lg font-extrabold">Email</h2>
                             <ul className="mt-3">
                                 <li className="flex items-center">
-                                    
+                                    <div className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                                        <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/48/google-gmail-256.png" width="20px" height="20px" fill='#007bff'
+                                            viewBox="0 0 479.058 479.058">
+                                        </img>
+                                    </div>
                                     <Link to="/contact" className="text-[#007bff] text-sm ml-3">
                                         <small className="block">Mail</small>
                                         <strong>binayakbhandari60@gmail.com</strong>
@@ -27,24 +31,28 @@ function ContactForm() {
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://github.com/binayakbhandari/">
                                         <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-256.png" width="20px" height="20px" fill='#007bff'
-                                            viewBox="0 0 511 512" />
+                                            viewBox="0 0 511 512">
+                                        </img>
                                     </Link>
                                 </li>
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://www.linkedin.com/in/binayak-bhandari/">
                                         <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-256.png" width="20px" height="20px" fill='#007bff'
-                                            viewBox="0 0 511 512" />
+                                            viewBox="0 0 511 512">
+                                        </img>
                                     </Link>
                                 </li>
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://facebook.com/binayakbhandari.np">
-                                        <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" width="20px" height="20px" fill='#007bff' viewBox="0 0 24 24" />
+                                        <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" width="20px" height="20px" fill='#007bff' viewBox="0 0 24 24">
+                                        </img>
                                     </Link>
                                 </li>
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://www.instagram.com/binayakbhandari_np/">
                                         <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/instagram_icon-instagram_buttoninstegram-256.png" width="20px" height="20px" fill='#007bff'
-                                            viewBox="0 0 511 512" />
+                                            viewBox="0 0 511 512">
+                                        </img>
                                     </Link>
                                 </li>
                             </ul>
