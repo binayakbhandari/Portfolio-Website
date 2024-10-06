@@ -42,24 +42,7 @@ function Navbar() {
 
                         {/* User Profile Button */}
                         <div>
-                            <Link to="https://www.linkedin.com/in/binayak-bhandari/">
-                                <button
-                                    type="button"
-                                    className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                    id="user-menu-button"
-                                    aria-expanded="false"
-                                    aria-haspopup="true"
-                                >
-                                    <span className="absolute -inset-1.5"></span>
-                                    <span className="sr-only">Open user menu</span>
-                                    <img
-                                        className="h-8 w-8 rounded-full"
-                                        src="https://avatars.githubusercontent.com/u/173297872?s=400&v=4"
-                                        onError={(e) => (e.target.src = defaultImage)}
-                                        alt=""
-                                    />
-                                </button>
-                            </Link>
+                            
                         </div>
                     </div>
                 </div>
