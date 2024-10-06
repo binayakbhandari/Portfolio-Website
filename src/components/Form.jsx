@@ -47,16 +47,7 @@ function Form({ type, id }) {
                 alert("Fail to create new profile.")
             }
         } else {
-            const response = await axios.patch("https://mern3-0-node-profilecard.onrender.com/person/" + id, data, {
-                headers: {
-                    "Content-Type": "multipart/form-data"
-                }
-            })
-            if (response.status === 200) {
-                navigate('/person/' + id)
-            } else {
-                alert("Failed to edit the profile.")
-            }
+            
         }
     }
 
