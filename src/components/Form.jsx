@@ -10,7 +10,18 @@ function Form({ type, id }) {
         personStatus: "single",
         personGender: "male"
     })
-    
+    const fetchPerson = async () => {
+        const response = await axios.get("https://mern3-0-node-profilecard.onrender.com/person/" + id)
+        if (response.status === 200) {
+            setData(response.data.data)
+        }
+    }
+
+    useEffect(() => {
+        if (type === "edit") {
+            fetchPerson()
+        }
+    }, [])
 
     const handleChange = (e) => {
         // console.log(e.target.value)
