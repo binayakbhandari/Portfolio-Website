@@ -27,28 +27,24 @@ function ContactForm() {
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://github.com/binayakbhandari/">
                                         <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-256.png" width="20px" height="20px" fill='#007bff'
-                                            viewBox="0 0 511 512">
-                                        </img>
+                                            viewBox="0 0 511 512" />
                                     </Link>
                                 </li>
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://www.linkedin.com/in/binayak-bhandari/">
                                         <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-256.png" width="20px" height="20px" fill='#007bff'
-                                            viewBox="0 0 511 512">
-                                        </img>
+                                            viewBox="0 0 511 512" />
                                     </Link>
                                 </li>
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://facebook.com/binayakbhandari.np">
-                                        <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" width="20px" height="20px" fill='#007bff' viewBox="0 0 24 24">
-                                        </img>
+                                        <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" width="20px" height="20px" fill='#007bff' viewBox="0 0 24 24" />
                                     </Link>
                                 </li>
                                 <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <Link to="https://www.instagram.com/binayakbhandari_np/">
                                         <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/instagram_icon-instagram_buttoninstegram-256.png" width="20px" height="20px" fill='#007bff'
-                                            viewBox="0 0 511 512">
-                                        </img>
+                                            viewBox="0 0 511 512" />
                                     </Link>
                                 </li>
                             </ul>
