@@ -13,11 +13,7 @@ function ContactForm() {
                             <h2 className="text-lg font-extrabold">Email</h2>
                             <ul className="mt-3">
                                 <li className="flex items-center">
-                                    <div className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                        <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/48/google-gmail-256.png" width="20px" height="20px" fill='#007bff'
-                                            viewBox="0 0 479.058 479.058">
-                                        </img>
-                                    </div>
+                                    
                                     <Link to="/contact" className="text-[#007bff] text-sm ml-3">
                                         <small className="block">Mail</small>
                                         <strong>binayakbhandari60@gmail.com</strong>
