@@ -18,6 +18,21 @@ const Services = () => {
       title: "Mobile Optimization",
       description: "Ensure websites work perfectly on all screen sizes and devices.",
     },
+    {
+      icon: <FaCode />,
+      title: "Web Development",
+      description: "Build responsive websites and apps using React and Tailwind CSS.",
+    },
+    {
+      icon: <FaPaintBrush />,
+      title: "UI/UX Design",
+      description: "Design clean, user-focused interfaces that improve usability.",
+    },
+    {
+      icon: <FaMobileAlt />,
+      title: "Mobile Optimization",
+      description: "Ensure websites work perfectly on all screen sizes and devices.",
+    },
   ];
 
   return (
