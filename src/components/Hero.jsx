@@ -18,7 +18,7 @@ const Hero = () => {
         </p>
 
         <div className="mt-6 flex gap-4">
-          <button className="bg-yellow-600 text-white px-5 py-2 rounded-md font-medium hover:bg-yellow-700">About</button>
+          <button className="bg-yellow-600 text-white px-5 py-2 rounded-md font-medium hover:bg-yellow-700">Download CV</button>
           <button className="border border-gray-300 px-5 py-2 rounded-md font-medium hover:bg-gray-100">Hire Me</button>
         </div>
       </div>
