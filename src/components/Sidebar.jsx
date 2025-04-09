@@ -1,5 +1,6 @@
 import { FaTwitter, FaFacebookF, FaDribbble, FaHome, FaStore, FaBlog, FaEnvelope, FaProjectDiagram, FaUser, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { FaSquareGithub } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -19,21 +20,21 @@ const Sidebar = () => {
             </div>
 
             <nav className="space-y-4 text-gray-700">
-                <a href="#" className="flex items-center gap-2 font-medium text-black">
-                    <FaHome /> Home
-                </a>
-                <a href="#" className="flex items-center gap-2">
-                    <FaUser /> About
-                </a>
-                <a href="#" className="flex items-center gap-2">
-                    <FaProjectDiagram /> Projects
-                </a>
-                <a href="#" className="flex items-center gap-2">
-                    <FaBlog /> Blog
-                </a>
-                <a href="#" className="flex items-center gap-2">
-                    <FaEnvelope /> Contact
-                </a>
+                <Link to="/" className="flex items-center gap-2 font-medium text-black">
+                <FaHome /> Home
+                </Link>
+                <Link to="/about" className="flex items-center gap-2 ">
+                <FaUser /> About
+                </Link>
+                <Link to="/projects" className="flex items-center gap-2 ">
+                <FaProjectDiagram /> Projects
+                </Link>
+                <Link to="/blog" className="flex items-center gap-2 ">
+                <FaBlog /> Blog
+                </Link>
+                <Link to="/contact" className="flex items-center gap-2 ">
+                <FaEnvelope /> Contact
+                </Link>
             </nav>
 
             <div className="mt-10 text-gray-600">
