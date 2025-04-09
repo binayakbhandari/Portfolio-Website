@@ -17,7 +17,7 @@ const SelectedWork = () => {
   return (
     <section className="mt-12">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold">Selected Work</h2>
+        <h2 className="text-xl font-bold">Completed Work</h2>
         <a href="#" className="text-yellow-600 text-sm hover:underline">View All →</a>
       </div>
 
