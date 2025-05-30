@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="space-y-6">
       <div>
-        <h1 className="text-4xl font-bold">Hello! I’m <span className="text-yellow-600">Binayak</span></h1>
+        <h1 className="text-4xl font-bold">Hello! I’m <span className="text-yellow-600">Binayak Bhandari</span></h1>
         <h2 className="text-2xl font-semibold text-gray-700">Frontend Developer</h2>
 
         <div className="flex items-center gap-2 mt-2">
