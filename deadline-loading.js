@@ -1,6 +1,6 @@
 // Init
 var $ = jQuery;
-var animationTime = 10,
+var animationTime = 20,
     days = 7;
  
 $(document).ready(function(){
