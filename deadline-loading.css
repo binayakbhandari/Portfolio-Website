@@ -69,11 +69,12 @@ body {
 .deadline-days {
   color: #fff;
   text-align: center;
-  width: 100px;
+  width: 50%;
   margin: 0 auto;
   position: relative;
   height: 20px;
   font-family: 'Oswald', sans-serif;
+  border: 1px solid white;
 }
 
 .deadline-days .inner {
@@ -81,9 +82,10 @@ body {
   position: relative;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 
-.mask-red,
+ .mask-red,
 .mask-white {
   position: absolute;
   top: 0;
@@ -97,12 +99,46 @@ body {
   width: 0;
   color: #BE002A;
   animation: text-red 20s ease infinite;
-  z-index: 2;
+  /* z-index: 2; */
+  z-index: 0;
   background: #000;
 }
 .mask-white {
   right: 0;
+} 
+
+@keyframes text-fill-left-to-right {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
+
+
+.animated-text {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, red 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  background-clip: text;    
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fillText 20s linear forwards;
+}
+
+@keyframes fillText {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
+}
+
 
 /* Flames */
 

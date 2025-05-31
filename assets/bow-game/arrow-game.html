@@ -6,24 +6,40 @@
     <title>Arrow GAme</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
-    <style >
-      body{
-        margin:0;
-        background:#222;
-        
-        margin:20px;
+    <style>
+      body {
+        margin: 0;
+        background: #222;
+        user-select: none;
+        -webkit-user-select: none;
+        /* Safari */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* IE10+ */
+    
+        margin: 20px;
       }
-      svg{
-        width:100%;
-        height:100%;
-        position:fixed;
-        top:0;
-        left:0;
+    
+      svg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
       }
-      span{
-        color:white;
-        font-family:sans-serif;
-        opacity:.3;
+    
+      span.note {
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: sans-serif;
+        opacity: 0.3;
+        font-size: 1.5rem;
+        pointer-events: none;
+        /* optional: let clicks pass through */
       }
     </style>
   </head>
@@ -94,7 +110,7 @@
         <path d="M526,195l5-20l22,5l-9,16L526,195z M558,164l32-44l-35-9l-19,51L558,164z"/>
       </g>
     </svg>
-    <span>Draw back an arrow and launch it!</span>
+    <span class="note">Draw back an arrow and launch it!</span>
 
     <script>
       var svg = document.querySelector("svg");

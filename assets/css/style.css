@@ -331,8 +331,11 @@ main {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
   overflow: hidden;
-  animation: floatUpDown 3s ease-in-out infinite;
   border: 1px solid yellow;
+}
+
+.avatar-box, .floating {
+    animation: floatUpDown 3s ease-in-out infinite;
 }
 
 @keyframes floatUpDown {
