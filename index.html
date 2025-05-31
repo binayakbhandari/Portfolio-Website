@@ -23,9 +23,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+  </style>
 </head>
 
 <body>
+
+  <!-- Loader will be loaded here -->
+  <div id="loader-container"></div>
 
   <!--
     - #MAIN
@@ -1218,7 +1224,31 @@
   </main>
 
 
+<!-- Loading animation js and jquery-->
+<!-- Load jQuery -->
+<script src="jquery.js"></script>
 
+<!-- Loader CSS -->
+<link rel="stylesheet" href="deadline-loading.css">
+
+<!-- Load loader HTML + wait before showing main content -->
+<script>
+  // Load loader into page
+  $("#loader-container").load("deadline-loading.html", function () {
+    // Run when page fully loaded
+    $(window).on("load", function () {
+      // Load loader JS
+      $.getScript("deadline-loading.js", function () {
+        // ⏳ Wait 10 seconds before hiding loader and showing content
+        setTimeout(function () {
+          $("#loader").fadeOut("slow", function () {
+            $("#main-content").fadeIn("slow");
+          });
+        }, 10000); // 10 seconds = 10000 ms
+      });
+    });
+  });
+</script>
 
 
 
