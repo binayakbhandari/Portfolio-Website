@@ -68,4 +68,3 @@ function timer(totalTime, deadline) {
     }, animationTime * 1000);
 
 });
-

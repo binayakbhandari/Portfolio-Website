@@ -37,7 +37,7 @@
     - #MAIN
   -->
 
-  <main>
+  <main id="main-content" style="display: none;">
 
     <!--
       - #SIDEBAR
@@ -638,9 +638,9 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <h4 class="h4 timeline-item-title">Web Developer intern at Digital Pathshala</h4>
 
-              <span>2010 — 2013</span>
+              <span>2024 — 2025</span>
 
               <p class="timeline-text">
                 Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
@@ -1233,22 +1233,30 @@
 
 <!-- Load loader HTML + wait before showing main content -->
 <script>
-  // Load loader into page
-  $("#loader-container").load("deadline-loading.html", function () {
-    // Run when page fully loaded
-    $(window).on("load", function () {
-      // Load loader JS
-      $.getScript("deadline-loading.js", function () {
-        // ⏳ Wait 10 seconds before hiding loader and showing content
-        setTimeout(function () {
-          $("#loader").fadeOut("slow", function () {
-            $("#main-content").fadeIn("slow");
-          });
-        }, 10000); // 10 seconds = 10000 ms
+  $(document).ready(function () {
+    const hasShownLoader = sessionStorage.getItem("hasShownLoader");
+
+    if (!hasShownLoader) {
+      // First visit or page refresh
+      $("#loader-container").load("deadline-loading.html", function () {
+        $.getScript("deadline-loading.js", function () {
+          setTimeout(function () {
+            $("#loader-container").fadeOut("fast", function () {
+              $("#main-content").fadeIn("slow");
+              sessionStorage.setItem("hasShownLoader", "true"); // Set flag
+            });
+          }, 10000); // 10 seconds
+        });
       });
-    });
+    } else {
+      // Skip loader instantly
+      $("#loader-container").remove(); // 🔥 Remove loader div completely
+      $("#main-content").show();       // 🚀 Show content instantly
+    }
   });
 </script>
+
+
 
 
 
