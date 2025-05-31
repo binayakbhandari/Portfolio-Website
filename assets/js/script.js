@@ -157,3 +157,31 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Form Success
+form.addEventListener('submit', async function(e) {
+  e.preventDefault(); // Stop the default form submit
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData
+    });
+
+    const text = await response.text(); // Get response as plain text
+
+    if (response.ok && text === "Success") {
+      alert('Message sent successfully!');
+      form.reset();
+      button.disabled = true;
+    } else {
+      throw new Error('Google Apps Script error or invalid response');
+    }
+
+  } catch (error) {
+    console.error(error);
+  }
+});
+
