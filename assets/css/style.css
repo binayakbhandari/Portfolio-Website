@@ -326,11 +326,21 @@ main {
   gap: 15px;
 }
 
+/* Animation for avatar box */
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
   overflow: hidden;
+  animation: floatUpDown 3s ease-in-out infinite;
+  border: 1px solid yellow;
 }
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 
 .info-content .name {
   color: var(--white-2);
@@ -525,6 +535,8 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  box-sizing: border-box;
+  transition: border 0.5s ease-in-out;
 }
 
 .service-item::before {
@@ -534,6 +546,11 @@ main {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+}
+
+.service-item:hover {
+  border: 1px solid yellow;
+  cursor: pointer;
 }
 
 .service-icon-box { margin-bottom: 10px; }

@@ -47,8 +47,8 @@
 
       <div class="sidebar-info">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/photo-removebg.png"  alt="Richard hanrick" width="70">
+        <figure class="avatar-box" class="floating">
+          <img src="./assets/images/photo-removebg.png"  alt="Binayak Bhandari" width="70" >
         </figure>
 
         <div class="info-content">
@@ -1242,7 +1242,7 @@
         $.getScript("deadline-loading.js", function () {
           setTimeout(function () {
             $("#loader-container").fadeOut("fast", function () {
-              $("#main-content").fadeIn("slow");
+              $("#main-content").fadeIn("fast");
               sessionStorage.setItem("hasShownLoader", "true"); // Set flag
             });
           }, 10000); // 10 seconds
