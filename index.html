@@ -1248,7 +1248,11 @@
           }, 17000); // 17 seconds
         });
       });
-    } 
+    } else {
+      // Skip loader instantly
+      $("#loader-container").remove(); // Remove loader div completely
+      $("#main-content").show();       // Show content instantly
+    }
   });
 </script>
 
